@@ -42,9 +42,10 @@ The "back" max value is higher than both "front" and "middle". But in general th
 ## Numerical Summarys 
 
 ```{r}
-favstats(momheight~Sex,data=ucdavis1)
+favstats(alcohol~Seat,data=davisdata)
 ```
 
+Based on the numerical values it seemed like more people sit in the "middle" part than both "front" and "back", and then "front" then "back". and the alcohol levels for the "back" (based on the mean) show that they are the highest at these seats, and then the "middle" and then the "front".
 
 ## Inferential Tests
 
