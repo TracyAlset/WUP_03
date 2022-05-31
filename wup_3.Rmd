@@ -49,6 +49,23 @@ Based on the numerical values it seemed like more people sit in the "middle" par
 
 ## Inferential Tests
 
+```{r}
+model1 <- aov(alcohol~Seat,data=davisdata)
+summary.aov(model1)
+```
+
+The low P value doesn't help us here. so we use the turkeyhsd test.
+
+```{r}
+plot(TukeyHSD(model1))
+```
+
+The high negative value of the difference between front and back shows that the mean value for the back is very much higher than the one for the front. for middle-back the difference is a little smaller but it's still relatively high so the mean value of the middle is lower than the one for the back. but for the middle-front the difference is almost negligable ( the subtraction value is close to zero ) so the middle's and the front's means are almost similar.
+
+
 ## Conclusions
+
+
+
 
 
