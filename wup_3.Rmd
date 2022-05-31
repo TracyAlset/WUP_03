@@ -54,7 +54,7 @@ model1 <- aov(alcohol~Seat,data=davisdata)
 summary.aov(model1)
 ```
 
-The low P value doesn't help us here. so we use the turkeyhsd test.
+The low P value doesn't help us here. so we use the tukeyhsd test.
 
 ```{r}
 plot(TukeyHSD(model1))
@@ -68,4 +68,5 @@ The high negative value of the difference between front and back shows that the 
 
 
 
+based on all of the data collected, it seems that the alcohol levels for the people sitting in the back are higher than the middle and the front. in addition to that, based on the TukeyHSD test it seemed that the mean values for the middle and the front are close to each other. In this project we saw how the p value test didn't really help us so we had to use the TukeyHSD test.
 
