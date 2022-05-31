@@ -24,6 +24,8 @@ basicCN <- ggplot(davisdata,aes(y=alcohol,x=Seat))
 ```
 ## Now add in boxplot
 
+
+
 ```{r}
 basicCN + geom_boxplot()
 ```
@@ -35,7 +37,14 @@ basicCN + geom_boxplot()
 basicCN + geom_boxplot(notch=TRUE,outlier.color = "red") + stat_boxplot(geom ='errorbar') + labs(title="Fancy notch boxplot \n with 2 lines")
 ```
 
+The "back" max value is higher than both "front" and "middle". But in general the alcohol levels for the "back" are higher than both "front" and " middle".
+
 ## Numerical Summarys 
+
+```{r}
+favstats(momheight~Sex,data=ucdavis1)
+```
+
 
 ## Inferential Tests
 
